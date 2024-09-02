@@ -34,18 +34,17 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        /* Styling for image 0624 and 0625 to ensure equal height */
-        .side-by-side {
+        /* Specific styles to ensure equal height for img 0624 and 0625 */
+        .img-side-by-side {
             display: flex;
             justify-content: space-between;
+            align-items: stretch;  /* Ensure images stretch to match each other’s height */
             gap: 20px;
         }
-        .side-by-side img {
+        .img-side-by-side img {
             width: 100%;
+            object-fit: cover;  /* Ensure images cover the height while keeping aspect ratio */
             height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         /* Ensuring specific image placement */
         .img1 {
@@ -59,10 +58,10 @@
         <img src="IMG_0621.jpeg" alt="Image 1" class="img1">
         <img src="IMG_0622.jpeg" alt="Image 2" class="img1">
         <img src="IMG_0623.jpeg" alt="Image 3" class="img1">
-    </div>
-    <div class="side-by-side">
-        <img src="IMG_0624.jpeg" alt="Image 4">
-        <img src="IMG_0625.jpeg" alt="Image 5">
+        <div class="img-side-by-side">
+            <img src="IMG_0624.jpeg" alt="Image 4">
+            <img src="IMG_0625.jpeg" alt="Image 5">
+        </div>
     </div>
 </body>
 </html>
