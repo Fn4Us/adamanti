@@ -22,7 +22,7 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
             padding: 20px;
             width: 100%;
@@ -34,12 +34,22 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        /* Styling for image 0624 and 0625 to ensure equal height */
+        .side-by-side {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .side-by-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
         /* Ensuring specific image placement */
         .img1 {
             grid-column: span 2;
-        }
-        .img2, .img3 {
-            grid-column: span 1;
         }
     </style>
 </head>
@@ -49,8 +59,10 @@
         <img src="IMG_0621.jpeg" alt="Image 1" class="img1">
         <img src="IMG_0622.jpeg" alt="Image 2" class="img1">
         <img src="IMG_0623.jpeg" alt="Image 3" class="img1">
-        <img src="IMG_0624.jpeg" alt="Image 4" class="img2">
-        <img src="IMG_0625.jpeg" alt="Image 5" class="img3">
+    </div>
+    <div class="side-by-side">
+        <img src="IMG_0624.jpeg" alt="Image 4">
+        <img src="IMG_0625.jpeg" alt="Image 5">
     </div>
 </body>
 </html>
